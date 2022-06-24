@@ -16,3 +16,7 @@ rsa==4.8
 six==1.16.0
 tg-logger==3.3
 urllib3==1.26.9
+flask
+flask-cors
+gevent
+gunicorn
