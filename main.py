@@ -49,8 +49,8 @@ except google.auth.exceptions.TransportError:
     print("Проверьте интернет соединение")
 dollar_quote = get_dollar_quote()
 for sheet_ in wks:
-    all_records = sheet_.get_all_records()
-    for record in all_records:
+    sheet_records = sheet_.get_all_records()
+    for record in sheet_records:
         db_id, order_id, cost_US, delivery_date = record.values()
         cost_RUB = cost_US*dollar_quote
         if not is_valid_date(order_id, delivery_date):
