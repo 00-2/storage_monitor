@@ -1,0 +1,10 @@
+REDIS_HOST = "redis"
+REDIS_PORT = 6379
+REDIS_DB = 0
+TASK_QUEUE_NAME = "tasks"
+PSQL_HOST="localhost"
+PSQL_USER="test_user"
+PSQL_PASSWORD="password"
+PSQL_PORT = 27017
+PSQL_DATABASE = "storage_monitor"
+tg_token = "5489697107:AAEdM3nqlvCAaZtcXlLsOQIH5lrmVwr7m"
