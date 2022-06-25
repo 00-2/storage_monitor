@@ -3,12 +3,12 @@ import os.path
 
 import flask
 import flask_cors
-
+import json
 env = os.environ.get("APP_ENV", "dev")
 print(f"Starting application in {env} mode")
 
 
-class HabrAppDemo(flask.Flask):
+class StorageMonitor(flask.Flask):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -19,6 +19,10 @@ class HabrAppDemo(flask.Flask):
         flask_cors.CORS(self)
 
 
-app = HabrAppDemo("habr-app-demo")
+app = StorageMonitor("monitor")
 
 app.config.from_object(f"backend.{env}_settings")
+
+@app.route('/members')
+def members():
+    return json.dumps({"members": ["1","2","3"]})

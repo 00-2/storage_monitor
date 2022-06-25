@@ -1,10 +1,20 @@
-import React, {Component} from 'react'
+import React, { useEffect } from 'react'
 //TODO declare usage of non react-libraries
-class App extends Component {
+function App() {
+    useEffect(() => {
+        fetch("http://localhost:40001/members").then(
+            res => res.json()
+        ).then(
+            data => {
+                console.log(data)
+            }
+        )
+    }, [])
 
-    render() {
-        return <h1>;;;</h1>
-    }
+    return (
+        <div>
+        </div>
+    )
 }
 
 export default App
