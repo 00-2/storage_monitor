@@ -80,10 +80,10 @@ function App() {
                 }}
                 >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="count" />
+                <XAxis dataKey="deliveryDate" />
                 <YAxis />
                 <Tooltip />
-                <Area type="monotone" dataKey="pv" stroke="#8884d8" fill="#8884d8" />
+                <Area type="monotone" dataKey="cost_usd" stroke="#8884d8" fill="#8884d8" />
                 </AreaChart>
             </ResponsiveContainer>
         )}

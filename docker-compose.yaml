@@ -1,11 +1,18 @@
 version: '3'
 services:
   postgres:
-    image: postgres:12.1
+    image: postgres
+    restart: always
+    build: 
+      context: db
+      dockerfile: Dockerfile
     environment:
       POSTGRES_DB: "storage_monitor"
       POSTGRES_USER: "test_user"
       POSTGRES_PASSWORD: "password"
+    ports:
+      - "5432:5432"
+  
   redis:
     image: "redis:alpine"
   backend:
