@@ -25,4 +25,4 @@ app.config.from_object(f"backend.{env}_settings")
 
 @app.route('/members')
 def members():
-    return json.dumps({"members": ["1","2","3"]})
+    return json.dumps({"members": [{"count":1,"pv":100 },{"count":2,"pv":200 },{"count":3,"pv":300 }]})
